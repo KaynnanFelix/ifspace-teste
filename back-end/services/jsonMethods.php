@@ -36,5 +36,5 @@ function editJson($file,$id){
 function deleteJson($file,$id){
 
 }
-getJson("./jsons/admin.json");
+getJson("../jsons/users/admin.json");
 ?>
