@@ -10,7 +10,7 @@ return $data[$id];
 }
 function addJson($file,$obj){
 $data=getJson($file);
-$data[]=$data;
+$data[]=$obj;
 saveJson($file,$data);
 }
 function editJson($file,$obj,$id){
