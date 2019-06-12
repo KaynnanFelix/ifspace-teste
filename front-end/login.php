@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IFSpace - Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
     <form action="../back-end/login.php" method="POST">
-        <label>Nome</label>
-        <input type="text" name="r_username" id="nome" required>
-        <label>Senha</label>
-        <input type="password" name="r_password" id="senha" required>
+        <label for="urs">Nome</label>
+        <input type="text" name="r_username" id="urs" required class="form-control">
+        <label for="pwd">Senha</label>
+        <input type="password" name="r_password" id="pwd" required class="form-control">
         <input type="submit" value="login">
     </form>
 </body>
