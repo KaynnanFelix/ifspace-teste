@@ -1,16 +1,11 @@
 <?php
-session_start();
-if(!$_POST){
-    echo "teste";
-}else{
-    if(isset($_POST['r_username']) && isset($_POST['r_password'])){
-        if($_POST['r_username'] == 'admin_username' && $_POST['password'] == 'admin_password'){
-            $_SESSION['login'] = $_POST['r_username'];
-        } else {
-            
-        }
-
+function login($username,$password,$file){
+include "./services/jsonMethods.php";
+$users=getJson($file);
+foreach($users as $user){
+    if($username===$user->nome and $password===$user->senha){
+        setcookie("user", $username, time() + (86400 * 30), "/");
     }
-
+}
 }
 ?>
