@@ -15,20 +15,31 @@ if(isset($_COOKIE['user'])){
 <body>
     <?php
     if(!$_POST){
-    echo '<form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
-        <label for="urs">Nome</label>
-        <input type="text" name="r_username" id="urs" required class="form-control">
-        <label for="pwd">Senha</label>
-        <input type="password" name="r_password" id="pwd" required class="form-control">
-        <input type="submit" value="login">
-    </form>'
-    }
-    ?>
-    <?php
+    echo "<form action=$_SERVER[PHP_SELF] method=POST>
+        <label for=urs>Nome</label>
+        <input type=text name=r_username id=urs required class=form-control>
+        <label for=pwd>Senha</label>
+        <input type=password name=r_password id=pwd required class=form-control>
+        <input type=submit value=login>
+    </form>";
+    }else{
+        include "../back-end/login.php";
+        if(login($_POST['r_username'],$_POST['r_password'],"../back-end/jsons/users/admin.json")){
+            echo "<script>location.href='index.php'</script>";
+        }else{
+            echo "Usuário não encontrado!
+            <form action=$_SERVER[PHP_SELF] method=POST>
+        <label for=urs>Nome</label>
+        <input type=text name=r_username id=urs required class=form-control value='$_POST[r_username]'>
+        <label for=pwd>Senha</label>
+        <input type=password name=r_password id=pwd required class=form-control>
+        <input type=submit value=login>
+    </form>
+            ";
 
-        if(isset($_POST['login'])){
-            
         }
+    }
+    
     ?>
 </body>
 </html>

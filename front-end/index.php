@@ -1,3 +1,10 @@
+<?php
+if(isset($_POST['sair'])){
+
+    $del=setcookie('user','',time() - 3600,'/');
+
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <meta charset="UFT-8">
@@ -22,6 +29,9 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Sobre</a>
                 </li>  
+                <form action="<?php echo "$_SERVER[PHP_SELF]"; ?>" method="POST" class="nav-item">
+                    <input type="submit" class="nav-link" name="sair">
+                </form>
             </ul>
         </nav>
     </head>
