@@ -15,10 +15,9 @@ if(isset($_POST['sair'])){
 </html>
 <body>
     <div class="container">
-
     </div>
     <head>
-        <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <nav class="navbar navbar-expand-sm bg-success justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">IFSpace</a>
