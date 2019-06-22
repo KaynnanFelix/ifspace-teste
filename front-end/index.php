@@ -17,24 +17,9 @@ if(isset($_POST['sair'])){
 <body>
     <div class="container">
     </div>
-    <head>
-        <nav class="navbar navbar-expand-sm bg-success justify-content-center">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">IFSpace</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin.php">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Sobre</a>
-                </li>  
-                <form action="<?php echo "$_SERVER[PHP_SELF]"; ?>" method="POST" class="nav-item">
-                    <input type="submit" class="nav-link" name="sair" value="Sair">
-                </form>
-            </ul>
-        </nav>
-    </head>
+<?php
+include "layout.php";
+?>
         <div class="container">
         <input id="type" type="radio" name="type" value="0" checked>Número
         <input id="type" type="radio" name="type" value="1">Aula
