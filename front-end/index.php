@@ -23,7 +23,7 @@ if(isset($_POST['sair'])){
                     <a class="nav-link" href="#">IFSpace</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
+                    <a class="nav-link" href="admin.php">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Sobre</a>
