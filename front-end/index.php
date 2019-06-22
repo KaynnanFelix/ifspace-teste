@@ -12,6 +12,7 @@ if(isset($_POST['sair'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IFSpace - Index</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="search.js"></script>
 </html>
 <body>
     <div class="container">
@@ -29,13 +30,14 @@ if(isset($_POST['sair'])){
                     <a class="nav-link disabled" href="#">Sobre</a>
                 </li>  
                 <form action="<?php echo "$_SERVER[PHP_SELF]"; ?>" method="POST" class="nav-item">
-                    <input type="submit" class="nav-link" name="sair">
+                    <input type="submit" class="nav-link" name="sair" value="Sair">
                 </form>
             </ul>
         </nav>
     </head>
         <div class="container">
-        <table class="table table-striped">
+        <input type="text" id="searchInput" onkeyup="searchSpace()" placeholder="Pesquipe por número, aula, professor ou localização">
+        <table class="table table-striped" id="tableSpace">
             <thead>
                 <tr>
                     <th>Número</th>
@@ -59,11 +61,5 @@ if(isset($_POST['sair'])){
                 </tr>
             </tbody>
         </table>
-    </div>
-    
-    <footer></footer>
-    
+    </div>  
 </body>
-<?php
-
-?>
