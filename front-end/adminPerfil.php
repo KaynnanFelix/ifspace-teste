@@ -10,24 +10,9 @@
     <title>Document</title>
 </head>
 <body>
-<head>
-        <nav class="navbar navbar-expand-sm bg-success justify-content-center">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">IFSpace</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin.php">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Sobre</a>
-                </li>
-                <form action="<?php echo "$_SERVER[PHP_SELF]"; ?>" method="POST" class="nav-item">
-                    <input type="submit" class="nav-link" name="sair">
-                </form>
-            </ul>
-        </nav>
-    </head>
+<?php
+include "layout.php";
+?>
     <div id="accordion">
   <div class="card">
     <div class="card-header" id="headingOne">
@@ -77,7 +62,7 @@
   <div class="card-body">
     <h5 class="card-title">Perfil</h5>
     <?php
-include "../../back-end/services/jsonMethods.php";
+include "../back-end/services/jsonMethods.php";
 $users = getJson("../../back-end/jsons/users/admin.json");
 $logged = $_COOKIE["user"];
 foreach ($users as $user) {

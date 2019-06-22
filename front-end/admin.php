@@ -16,18 +16,9 @@ if(isset($_COOKIE['user'])){
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<head>
-        <nav class="navbar navbar-expand-sm bg-success justify-content-center">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">IFSpace</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Sobre</a>
-                </li>  
-            </ul>
-        </nav>
-    </head>
+<?php
+include "layout.php";
+?>
     <div class="row">
         <div class="col-sm-4">
         </div>
