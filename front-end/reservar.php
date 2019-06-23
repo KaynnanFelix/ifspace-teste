@@ -18,29 +18,32 @@ include "../back-end/services/jsonMethods.php";
 echo "
 
 "
-?>  
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Número</span>
-      </div>
-      <input type="text" id="" name="" required class="form-control">
-    </div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Aula</span>
-      </div>
-      <input type="text" id="" name="" required class="form-control">
-    </div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Professor</span>
-      </div>
-      <input type="text" id="" name="" required class="form-control">
-    </div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Localização</span>
-      </div>
-      <input type="text" id="" name="" required class="form-control">
-    </div>
+?>
+<form action="">
+<table class="table table-striped" id="tableSpace">
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>Tipo</th>
+                    <th>Localização</th>
+                    <th>Reservar</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            include "../back-end/services/jsonMethods.php";
+            $spacesList = getJson("../back-end/jsons/spaces/spaceList.json");
+            foreach($spaceList as $space){
+            echo "
+                <tr>
+                    <td>$space->numero</td>
+                    <td>$space->tipo</td>
+                    <td>$space->localizacao</td>
+                    <td></td>
+                </tr>";
+            }
+            ?>
+            </tbody>
+        </table>
+</form>
 </body>
