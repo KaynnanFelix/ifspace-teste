@@ -39,18 +39,19 @@ include "layout.php";
                 </tr>
             </thead>
             <tbody>
+            <?php
+            include "../back-end/services/jsonMethods.php";
+            $spaces = getJson("../back-end/jsons/spaces/space.json");
+            foreach($spaces as $space){
+            echo "
                 <tr>
-                    <td>14</td>
-                    <td>AW2</td>
-                    <td>Josceli</td>
-                    <td>Bloco C</td>
-                </tr>
-                <tr>
-                    <td>321</td>
-                    <td>GEI</td>
-                    <td>Joscéli</td>
-                    <td>Bloco A</td>
-                </tr>
+                    <td>$space->numero</td>
+                    <td>$space->aula</td>
+                    <td>$space->professor</td>
+                    <td>$space->localizacao</td>
+                </tr>";
+            }
+            ?>
             </tbody>
         </table>
     </div>  

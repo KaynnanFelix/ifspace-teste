@@ -68,7 +68,7 @@ include "layout.php";
     <h5 class="card-title">Perfil</h5>
     <?php
 include "../back-end/services/jsonMethods.php";
-$users = getJson("../../back-end/jsons/users/admin.json");
+$users = getJson("../back-end/jsons/users/admin.json");
 $logged = $_COOKIE["user"];
 foreach ($users as $user) {
     if ($user->nome === $logged) {

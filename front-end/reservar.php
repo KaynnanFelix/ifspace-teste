@@ -14,8 +14,9 @@
     </div>
 <?php
 include "layout.php";
-?>
+include "../back-end/services/jsonMethods.php";
+echo "
 
-
-    
+"
+?>  
 </body>
