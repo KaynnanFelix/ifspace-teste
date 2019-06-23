@@ -1,10 +1,3 @@
-<?php
-if(isset($_POST['sair'])){
-
-    $del=setcookie('user','',time() - 3600,'/');
-
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <meta charset="UFT-8">
