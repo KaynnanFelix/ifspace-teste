@@ -19,4 +19,28 @@ echo "
 
 "
 ?>  
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Número</span>
+      </div>
+      <input type="text" id="" name="" required class="form-control">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Aula</span>
+      </div>
+      <input type="text" id="" name="" required class="form-control">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Professor</span>
+      </div>
+      <input type="text" id="" name="" required class="form-control">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Localização</span>
+      </div>
+      <input type="text" id="" name="" required class="form-control">
+    </div>
 </body>
