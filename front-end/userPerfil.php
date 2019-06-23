@@ -1,5 +1,5 @@
 <?php
-if(isset($_COOKIE['user'])){
+if(isset($_COOKIE['admin'])){
     header("location: index.php");
 }
 ?>
@@ -35,7 +35,7 @@ include "layout.php";
     <h5 class="card-title">Perfil</h5>
     <?php
 include "../back-end/services/jsonMethods.php";
-$users = getJson("../back-end/jsons/users/admin.json");
+$users = getJson("../back-end/jsons/users/professor.json");
 $logged = $_COOKIE["user"];
 foreach ($users as $user) {
     if ($user->nome === $logged) {
@@ -60,8 +60,7 @@ foreach ($users as $user) {
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-       <a href="#">Espaços</a>
-       <a href="#">Usuários</a>
+       <a href="../front-end\minhasReservas.php">Minhas Reservas</a>
       </div>
     </div>
   </div>

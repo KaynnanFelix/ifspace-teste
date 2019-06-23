@@ -39,7 +39,7 @@ echo "
                     <td>$space->numero</td>
                     <td>$space->tipo</td>
                     <td>$space->localizacao</td>
-                    <td></td>
+                    <td>editar</td>
                 </tr>";
             }
             ?>
