@@ -4,7 +4,7 @@ include "services/jsonMethods.php";
 $users=getJson($file);
 foreach($users as $user){
     if($username===$user->nome and $password===$user->senha){
-        setcookie("user", $username, time() + (86400 * 30), "/");
+        setcookie("admin", $username, time() + (86400 * 30), "/");
         return true;
     }
 }
