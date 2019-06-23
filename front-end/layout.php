@@ -33,7 +33,7 @@ echo "<nav class='navbar navbar-expand-lg navbar-light bg-success'>
       </li>";
     }else{
         echo "<li class='nav-item'>
-        <a class='nav-link' href='admin.php'>Login</a>
+        <a class='nav-link' href='login.php'>Login</a>
       </li>";
     }
   echo "</ul>
