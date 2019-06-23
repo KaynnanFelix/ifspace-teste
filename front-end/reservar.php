@@ -26,10 +26,10 @@ include "layout.php";
     <table class="table table-striped" id="tableSpace">
         <thead>
             <tr>
-                <th>Número</th>
-                <th>Tipo</th>
-                <th>Localização</th>
-                <th>Ações</th>
+                <th>Nome</th>
+                <th>Professor</th>
+                <th>Entrada</th>
+                <th>Saída</th>
             </tr>
         </thead>
         <tbody>
@@ -40,14 +40,11 @@ include "layout.php";
             foreach($spacesList as $space){
             echo "
                 <tr>
-                    <td>$space->numero</td>
-                    <td>$space->tipo</td>
-                    <td>$space->localizacao</td>
-<<<<<<< HEAD
+                    <td>$space->nome</td>
+                    <td>$space->professor</td>
+                    <td>$space->entrada</td>
+                    <td>$space->saida</td>
                     <td><a href='edit.php?id=$id'>Editar</a> || <a href='delete.php?id=$id'>Excluir</a></td>
-=======
-                    <td>editar</td>
->>>>>>> 664e07f2489bb5518e21001a3ba1334197f122e0
                 </tr>";
             }
             $id++;
