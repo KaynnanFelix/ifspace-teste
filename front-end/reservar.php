@@ -43,7 +43,11 @@ include "layout.php";
                     <td>$space->numero</td>
                     <td>$space->tipo</td>
                     <td>$space->localizacao</td>
+<<<<<<< HEAD
                     <td><a href='edit.php?id=$id'>Editar</a> || <a href='delete.php?id=$id'>Excluir</a></td>
+=======
+                    <td>editar</td>
+>>>>>>> 664e07f2489bb5518e21001a3ba1334197f122e0
                 </tr>";
             }
             $id++;
