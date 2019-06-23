@@ -18,5 +18,32 @@ include "../back-end/services/jsonMethods.php";
 echo "
 
 "
-?>  
+?>
+<form action="">
+<table class="table table-striped" id="tableSpace">
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>Tipo</th>
+                    <th>Localização</th>
+                    <th>Reservar</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            include "../back-end/services/jsonMethods.php";
+            $spacesList = getJson("../back-end/jsons/spaces/spaceList.json");
+            foreach($spaceList as $space){
+            echo "
+                <tr>
+                    <td>$space->numero</td>
+                    <td>$space->tipo</td>
+                    <td>$space->localizacao</td>
+                    <td></td>
+                </tr>";
+            }
+            ?>
+            </tbody>
+        </table>
+</form>
 </body>
