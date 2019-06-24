@@ -1,8 +1,1 @@
-[
-    {
-        "nome": "Caleb",
-        "senha": "12345",
-        "data_nasc": "20/04/2000",
-        "prontuario": "1753045"
-    }
-]
+[{"nome":"Caleb","senha":"12345","data_nasc":"20\/04\/2000","prontuario":"1753045"},{"nome":"cc","senha":"ccc","area":"Departamento de Ci\u00eancias Humanas","data_nasc":"ccc","prontuario":"ccc"},{"nome":"","senha":"","area":"Departamento de Inform\u00e1tica e Turismo","data_nasc":"","prontuario":""},{"nome":"","senha":"","area":"Departamento de Inform\u00e1tica e Turismo","data_nasc":"","prontuario":""},{"nome":"","senha":"","area":"Departamento de Inform\u00e1tica e Turismo","data_nasc":"","prontuario":""}]
