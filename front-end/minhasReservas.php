@@ -1,1 +1,3 @@
-<?phpinclude "layout.php";?>
+<?php
+include "layout.php";
+?>
