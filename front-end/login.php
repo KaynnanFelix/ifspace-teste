@@ -46,7 +46,7 @@ include "layout.php";
   <div class="item2"></div>
   <div class="item3"></div>  
   <div class="item4"></div>
-  <div class="item5"><h1 class="text-success" style="color:black; text-align:center">Login</h1>
+  <div class="item5"><h1 class="text-success" style="color:black; text-align:center">IFSpace - Login</h1>
                     <?php
                       if(!$_POST){
                         echo "<form action=$_SERVER[PHP_SELF] method=POST>
