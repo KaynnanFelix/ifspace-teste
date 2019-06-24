@@ -1,4 +1,7 @@
 <?php
+if(!isset($_COOKIE['admin'])){
+  header("Location:erroAuth.php");
+}
 include "../back-end/services/jsonMethods.php";
 
 if(isset($_POST['adicionar'])){

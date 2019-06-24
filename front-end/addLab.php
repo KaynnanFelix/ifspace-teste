@@ -1,4 +1,7 @@
 <?php
+if(!isset($_COOKIE['admin'])){
+  header("Location:erroAuth.php");
+}
 if(isset($_POST['adicionar'])){
     include "../back-end/services/jsonMethods.php";
     class Register{
