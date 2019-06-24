@@ -15,17 +15,38 @@ if(isset($_COOKIE['user']) or isset($_COOKIE['admin'])){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 50px;
+}
+
+.item5 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 4;
+  grid-column-end: 3;
+}
+</style>
 <body>
 <?php
 include "layout.php";
 ?>
-    <div class="row">
-        <div class="col-sm-4">
-        </div>
-        <div class="col-sm-4 justify-content-center" style="color:white">
-            <div class="card" style="width:100%">
-                <div class="card-body">
-                    <h1 class="text-success" style="color:black; text-align:center">Login</h1>
+
+<div class="grid-container">
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>  
+  <div class="item4"></div>
+  <div class="item5"><h1 class="text-success" style="color:black; text-align:center">Login</h1>
                     <?php
                       if(!$_POST){
                         echo "<form action=$_SERVER[PHP_SELF] method=POST>
@@ -64,12 +85,12 @@ include "layout.php";
                                 </form>";
                         }
                     }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-        </div>
-    </div>  
+                    ?></div>
+  <div class="item6"></div>
+  <div class="item7"></div>
+  <div class="item8"></div>  
+</div>
+
+    
 </body>
 </html>
