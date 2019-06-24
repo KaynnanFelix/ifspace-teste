@@ -1,3 +1,8 @@
+<?php
+if(!isset($_COOKIE['admin'])){
+    header("Location:erroAuth.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <meta charset="UFT-8">

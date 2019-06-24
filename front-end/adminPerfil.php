@@ -1,6 +1,6 @@
 <?php
-if(isset($_COOKIE['user'])){
-    header("location: index.php");
+if(!isset($_COOKIE['admin'])){
+  header("Location:erroAuth.php");
 }
 ?>
 <html lang="en">
@@ -60,7 +60,7 @@ foreach ($users as $user) {
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-       <a href="#">Espaços</a>
+       <a href="viewLab.php">Visualizar laboratórios</a><br>
        <a href="#">Usuários</a>
       </div>
     </div>
