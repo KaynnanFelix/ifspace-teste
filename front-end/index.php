@@ -49,6 +49,12 @@ include "layout.php";
       foreach($labs as $lab){
         echo "<option value='$lab->nome' class='Laboratórios'>$lab->nome</option>";
       }
+      foreach($classes as $class){
+        echo "<option value='$class->nome' class='Salas'>$class->nome</option>";
+      }
+      foreach($theaters as $theater){
+        echo "<option value='$theater->nome' class='Teatros'>$theater->nome</option>";
+      }
     ?>
   </select>
 </div>
