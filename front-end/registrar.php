@@ -68,7 +68,7 @@ include "layout.php";
   <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="saida">
 </div>
 
-<input type="submit" class="btn btn-primary" name="adicionar">
+<input type="submit" class="btn btn-success" name="adicionar">
 </form>
 
 
