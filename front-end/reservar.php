@@ -27,6 +27,7 @@ include "layout.php";
         <thead>
             <tr>
                 <th>Nome</th>
+                <th>Local<th>
                 <th>Professor</th>
                 <th>Entrada</th>
                 <th>Saída</th>
@@ -39,7 +40,8 @@ include "layout.php";
             foreach($espacos as $espaco){
             echo "
                 <tr>
-                    <td>$espaco->aula</td>
+                    <td>$espaco->nome</td>
+                    <td>$espaco->local<td>
                     <td>$espaco->professor</td>
                     <td>$espaco->entrada</td>
                     <td>$espaco->saida</td>

@@ -1,17 +1,18 @@
 <?php
 if(isset($_POST['adicionar'])){
     include "../back-end/services/jsonMethods.php";
-    $horarios=getJson("../back-end/jsons/spaces/spaceList.json");
+    $horarios=getJson("../back-end/jsons/espacos/".$_POST['tipo']."/registros.json");
     class Register{
         function __construct(){
         $this->nome=$_POST['nome'];
+        $this->local=$_POST['nomeEsp'];
         $this->professor=$_COOKIE['user'];
         $this->entrada=$_POST['entrada'];
         $this->saida=$_POST['saida'];
         }
     }
     $register=new Register();
-    addJson("../back-end/jsons/espacos/".$_GET['tipo']."/registros.json",$register);
+    addJson("../back-end/jsons/espacos/".$_POST['tipo']."/registros.json",$register);
     header("Location: reservar.php");
 }
 ?>
@@ -51,6 +52,8 @@ include "layout.php";
   </div>
   <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="saida">
 </div>
+<input type="hidden" value="<?php echo $_GET['tipo'];?>" name="tipo">
+<input type="hidden" value="<?php echo $_GET['nome'];?>" name="nomeEsp">
 <input type="submit" class="btn btn-primary" name="adicionar">
 </form>
 </body>
