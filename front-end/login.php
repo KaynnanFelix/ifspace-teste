@@ -42,6 +42,7 @@ if (!isset($_POST['login'])){
             <input type=password name=r_password id=pwd required class=form-control>
         </div>
         <input name='login' class='btn btn-success form-control' type=submit value=login style='text-align:center'>
+        <a href=addProfessor.php>Novo por aqui? Cadastre-se já</a>
     </form>
 </div>
 </body>
