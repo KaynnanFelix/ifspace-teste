@@ -9,12 +9,10 @@ if(isset($_POST['adicionar'])){
         $this->entrada=$_POST['entrada'];
         $this->saida=$_POST['saida'];
         }
-    }
-    if($_POST['tipo']=="sala"){
+    } 
     $register=new Register();
-    addJson("../back-end/jsons/espacos/salas/registros.json",$register);
+    addJson("../back-end/jsons/espacos/$/registros.json",$register);
     header("Location: index.php");
-}
 }
 ?>
 
