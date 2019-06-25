@@ -35,16 +35,9 @@ include "layout.php";
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+    <span class="input-group-text" id="inputGroup-sizing-default">Nome da aula</span>
   </div>
-  <select name="nome" id="nome">
-  <?php
-    $espacos = getJson("../back-end/jsons/espacos/".$_POST['tipo']."/registros.json");
-    foreach($espacos as $espaco){
-      echo "<option value=$espaco->nome>$espaco->nome</option>";
-    }
-    ?>
-  </select>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="nome">
 </div>
 <div class="input-group mb-3">
   <div class="input-group-prepend">
