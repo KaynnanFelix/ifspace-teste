@@ -26,7 +26,8 @@ include "layout.php";
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
   </div>
-  <select class="custom-select" id="inputGroupSelect01" name="tipo">
+  <select class="custom-select" id="tipo" name="tipo" required>
+  <option ></option>
     <option value="salas">Salas</option>
     <option value="teatro">Teatros</option>
     <option value="laboratorio">Laboratórios</option>
@@ -38,15 +39,15 @@ include "layout.php";
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Nome</label>
   </div>
-  <select class="custom-select" id="inputGroupSelect01" name="nome">
-
+  <select class="custom-select" id="nome" name="nome" required>
+<option></option>
     <?php
       include "../back-end/services/jsonMethods.php";
       $labs=getJson("../back-end/jsons/espacos/laboratorio/laboratorios.json");
       $classes=getJson("../back-end/jsons/espacos/salas/salas.json");
       $theaters=getJson("../back-end/jsons/espacos/teatro/teatros.json");
       foreach($labs as $lab){
-        echo "<option value='$lab->nome'>$lab->nome</option>";
+        echo "<option value='$lab->nome' class='Laboratórios'>$lab->nome</option>";
       }
     ?>
   </select>
@@ -55,4 +56,15 @@ include "layout.php";
 </form>
   </div>
 </div>
+<div id="result"></div>
+<script>
+$("#nome").children().hide();
+$("#tipo").change(function(){
+  $("#nome option:selected").prop("selected", false)
+  $("#nome").children().hide();
+  var selected=$("#tipo option:selected" ).text();
+$("."+selected).show();
+});
+
+</script>
 </body>
