@@ -19,7 +19,7 @@ include "layout.php";
 ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4"><a href="adicionar.php?tipo=<?php echo $_POST["tipo"];?>">Reserve já!<a></h1>
+            <h1 class="display-4"><a href="adicionar.php?tipo=<?php echo $_POST["tipo"];?>&nome=<?php echo $_POST["nome"];?>">Reserve já!<a></h1>
             <p class="lead">Garanta já a sua sala, teatro ou laboratório!</p>
         </div>
     </div>
@@ -35,7 +35,7 @@ include "layout.php";
         <tbody>
         <?php
             include "../back-end/services/jsonMethods.php";
-            $espacos = getJson("../back-end/jsons/espacos/$_POST['tipo']/registros.json");
+            $espacos = getJson("../back-end/jsons/espacos/".$_POST['tipo']."/registros.json");
             foreach($espacos as $espaco){
             echo "
                 <tr>
