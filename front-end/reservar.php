@@ -37,7 +37,13 @@ include "layout.php";
         <?php
             include "../back-end/services/jsonMethods.php";
             $espacos = getJson("../back-end/jsons/espacos/".$_POST['tipo']."/registros.json");
+            $results=array();
             foreach($espacos as $espaco){
+                if($espaco->local===$_POST['nome']){
+                    $results[]=$espaco;
+                }
+            }
+            foreach($results as $espaco){
             echo "
                 <tr>
                     <td>$espaco->nome</td>
