@@ -61,7 +61,9 @@ foreach ($users as $user) {
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
        <a href="viewLab.php">Visualizar laboratórios</a><br>
-       <a href="#">Usuários</a>
+       <a href="viewSala.php">Visualizar salas</a><br>
+       <a href="viewTeatro.php">Visualizar teatros</a><br>
+       <a href="#" class="nav-link disabled">Usuários</a>
       </div>
     </div>
   </div>
