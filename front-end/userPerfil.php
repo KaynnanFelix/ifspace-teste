@@ -40,8 +40,8 @@ $logged = $_COOKIE["user"];
 foreach ($users as $user) {
     if ($user->nome === $logged) {
         echo "<p class='card-text'>Nome: $user->nome</p>
-        <p class='card-text'>Nome: $user->data_nasc</p>
-        <p class='card-text'>Nome: $user->prontuario</p>
+        <p class='card-text'>Data de nascimento: $user->data_nasc</p>
+        <p class='card-text'>Prontuário: $user->prontuario</p>
         ";
     }
 }
