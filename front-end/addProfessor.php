@@ -34,7 +34,7 @@ if(isset($_POST['adicionar'])){
 include "layout.php";
 ?>
  <div class="w-25 mx-auto mt-5">
-<h1 class="text-success" style="color:black" text-align:center>Cadastro de Usuários</h1>
+<h1 class="text-success" style="color:black text-align:center">Cadastro de Usuários</h1>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
