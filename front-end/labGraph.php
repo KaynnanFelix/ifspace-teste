@@ -7,7 +7,7 @@ $dataPoints = array();
 foreach($labs as $lab){
     $count=0;
     foreach($registros as $registro){
-        if($lab->nome===$registro->nome){
+        if($lab->nome===$registro->local){
             $count++;
         }
     }

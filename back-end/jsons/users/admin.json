@@ -1,14 +1,6 @@
-[
-    {
-        "nome": "Caleb",
-        "senha": "12345",
-        "data_nasc":"20/04/2000",
-        "prontuario":"1753045"
-    },
-    {
-        "nome":"Kaynnan",
-        "senha":"12345",
-        "data_nasc":"25/03/2001",
-        "prontuario":"1650301"
-    }
-]
+[{
+    "nome": "Caleb",
+    "senha": "12345",
+    "data_nasc": "20/04/2000",
+    "prontuario": "1753045"
+}]

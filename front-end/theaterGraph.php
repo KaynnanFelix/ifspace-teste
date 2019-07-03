@@ -7,13 +7,13 @@ $dataPoints = array();
 foreach($theaters as $theater){
     $count=0;
     foreach($registros as $registro){
-        if($theater->nome===$registro->nome){
+        if($theater->nome===$registro->local){
             $count++;
         }
     }
     $dataPoints[]=array("label"=>$theater->nome, "y"=>$count);
 }
-print_r($dataPoints);
+
 
 
 	

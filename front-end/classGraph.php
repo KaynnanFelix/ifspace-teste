@@ -7,13 +7,13 @@ $dataPoints = array();
 foreach($classes as $class){
     $count=0;
     foreach($registros as $registro){
-        if($class->nome===$registro->nome){
+        if($class->nome===$registro->local){
             $count++;
         }
     }
     $dataPoints[]=array("label"=>$class->nome, "y"=>$count);
 }
-print_r($dataPoints);
+
 
 
 	
