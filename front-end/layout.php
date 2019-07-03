@@ -20,7 +20,18 @@ echo "<nav class='navbar navbar-expand-lg navbar-light bg-success'>
         <a class='dropdown-item' href='adminPerfil.php'>Perfil</a>
         <a class='dropdown-item' href='sair.php'>Sair</a>
       </div>
-    </li>";
+    </li>
+    <li class='nav-item dropdown'>
+      <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+        Adicionar
+      </a>
+      <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+        <a class='dropdown-item' href='addLab.php'>Laboratório</a>
+        <a class='dropdown-item' href='addSala.php'>Sala</a>
+        <a class='dropdown-item' href='addTeatro.php'>Teatro</a>
+      </div>
+    </li>
+    ";
     }else if(isset($_COOKIE['user'])){
         echo "<li class='nav-item dropdown'>
         <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>

@@ -11,7 +11,7 @@ if(isset($_POST['adicionar'])){
         }
     } 
     $register=new Register();
-    addJson("../back-end/jsons/espacos/$/registros.json",$register);
+    addJson("../back-end/jsons/espacos/$_Post['tipo']/registros.json",$register);
     header("Location: index.php");
 }
 ?>
