@@ -39,7 +39,7 @@ include "layout.php";
             foreach($espacos as $espaco){
             echo "
                 <tr>
-                    <td>$espaco->local</td>
+                    <td>$espaco->aula</td>
                     <td>$espaco->professor</td>
                     <td>$espaco->entrada</td>
                     <td>$espaco->saida</td>
