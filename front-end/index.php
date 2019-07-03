@@ -19,6 +19,7 @@ include "layout.php";
         
     <div class="card w-25 mx-auto mt-5" style="width: 18rem;">
   <div class="card-body">
+  <form method="post" action="reservar.php">
     <h5 class="card-title">Faça aqui sua pesquisa!</h5>
     <h6 class="card-subtitle mb-2 text-muted">Insira o tipo e o nome</h6>
     <div class="input-group mb-3">
@@ -44,10 +45,14 @@ include "layout.php";
       $labs=getJson("../back-end/jsons/espacos/laboratorio/laboratorios.json");
       $classes=getJson("../back-end/jsons/espacos/salas/salas.json");
       $theaters=getJson("../back-end/jsons/espacos/teatro/teatros.json");
+      foreach($labs as $lab){
+        echo "<option value='$lab->nome'>$lab->nome</option>";
+      }
     ?>
   </select>
 </div>
-
+<input class="btn btn-primary" type="submit" value="Pesquisar">
+</form>
   </div>
 </div>
 </body>
