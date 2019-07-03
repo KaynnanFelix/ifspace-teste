@@ -13,7 +13,7 @@ if(isset($_POST['adicionar'])){
     }
     $register=new Register();
     addJson("../back-end/jsons/espacos/".$_POST['tipo']."/registros.json",$register);
-    header("Location: reservar.php");
+    header("Location: index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -44,13 +44,13 @@ include "layout.php";
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">Horário de entrada</span>
   </div>
-  <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="entrada">
+  <input type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="entrada">
 </div>
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">Horário de saída</span>
   </div>
-  <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="saida">
+  <input type="datetime-local" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="saida">
 </div>
 <input type="hidden" value="<?php echo $_GET['tipo'];?>" name="tipo">
 <input type="hidden" value="<?php echo $_GET['nome'];?>" name="nomeEsp">
