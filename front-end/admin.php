@@ -49,7 +49,7 @@ if (!isset($_POST['login'])){
 </html>";
 } else {
     include "../back-end/login.php";
-    if (login($_POST['r_username'], $_POST['r_password'], "../back-end/jsons/users/professor.json", "admin")) {
+    if (login($_POST['r_username'], $_POST['r_password'], "../back-end/jsons/users/admin.json", "admin")) {
         echo "<script>location.href='index.php'</script>";
     } else {
         include 'layout.php';
