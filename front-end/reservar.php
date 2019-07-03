@@ -19,7 +19,7 @@ include "layout.php";
 ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4"><a href="adicionar.php">Reserve já!<a></h1>
+            <h1 class="display-4"><a href="adicionar.php?tipo=<?php echo $_POST["tipo"];?>">Reserve já!<a></h1>
             <p class="lead">Garanta já a sua sala, teatro ou laboratório!</p>
         </div>
     </div>
@@ -33,22 +33,20 @@ include "layout.php";
             </tr>
         </thead>
         <tbody>
-            <?php
+        <?php
             include "../back-end/services/jsonMethods.php";
-            $spacesList = getJson("../back-end/jsons/spaces/spaceList.json");
-            $id=0;
-            foreach($spacesList as $space){
+            $espacos = getJson("../back-end/jsons/espacos/$_POST['tipo']/registros.json");
+            foreach($espacos as $espaco){
             echo "
                 <tr>
-                    <td>$space->nome</td>
-                    <td>$space->professor</td>
-                    <td>$space->entrada</td>
-                    <td>$space->saida</td>
-                    <td><a href='edit.php?id=$id'>Editar</a> || <a href='delete.php?id=$id'>Excluir</a></td>
+                    <td>$espaco->local</td>
+                    <td>$espaco->professor</td>
+                    <td>$espaco->entrada</td>
+                    <td>$espaco->saida</td>
                 </tr>";
             }
-            $id++;
             ?>
+            </tbody>
         </tbody>
     </table>
 </body>

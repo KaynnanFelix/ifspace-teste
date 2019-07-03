@@ -11,7 +11,7 @@ if(isset($_POST['adicionar'])){
         }
     }
     $register=new Register();
-    addJson("../back-end/jsons/spaces/spaceList.json",$register);
+    addJson("../back-end/jsons/espacos/$_GET['tipo']/registros.json",$register);
     header("Location: reservar.php");
 }
 ?>
