@@ -35,6 +35,12 @@ include "layout.php";
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Nome da aula</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="nome">
+</div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">Horário de entrada</span>
   </div>
   <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="entrada">
