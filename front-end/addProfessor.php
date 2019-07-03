@@ -33,7 +33,8 @@ if(isset($_POST['adicionar'])){
 <?php
 include "layout.php";
 ?>
-<h2>Cadastro de Usuários</h2>
+ <div class="w-25 mx-auto mt-5">
+<h1 class="text-success" style="color:black text-align:center">Cadastro de Usuários</h1>
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
@@ -74,6 +75,7 @@ include "layout.php";
   <input type="integer" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="prontuario">
 </div>
 
-<input type="submit" class="btn btn-primary" name="adicionar">
+<input type="submit" class="btn btn-success" name="adicionar" value="Cadastrar" style=text-align:center>
 </form>
+</div>
 </body>
