@@ -11,7 +11,7 @@ if(isset($_POST['adicionar'])){
         }
     }
     $register=new Register();
-    addJson("../back-end/jsons/espacos/$_GET['tipo']/registros.json",$register);
+    addJson("../back-end/jsons/espacos/".$_GET['tipo']."/registros.json",$register);
     header("Location: reservar.php");
 }
 ?>
@@ -35,9 +35,16 @@ include "layout.php";
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">Nome da aula</span>
+    <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
   </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="nome">
+  <select name="nome" id="nome">
+  <?php
+    $espacos = getJson("../back-end/jsons/espacos/".$_POST['tipo']."/registros.json");
+    foreach($espacos as $espaco){
+      echo "<option value=$espaco->nome>$espaco->nome</option>";
+    }
+    ?>
+  </select>
 </div>
 <div class="input-group mb-3">
   <div class="input-group-prepend">
