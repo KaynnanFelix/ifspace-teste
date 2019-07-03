@@ -26,10 +26,9 @@ include "layout.php";
     <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
   </div>
   <select class="custom-select" id="inputGroupSelect01" name="tipo">
-    <option selected>Escolher...</option>
-    <option value="1">Um</option>
-    <option value="2">Dois</option>
-    <option value="3">Três</option>
+    <option value="salas">Salas</option>
+    <option value="teatro">Teatros</option>
+    <option value="laboratorio">Laboratórios</option>
   </select>
 </div>
 
@@ -38,11 +37,14 @@ include "layout.php";
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Nome</label>
   </div>
-  <select class="custom-select" id="inputGroupSelect01">
-    <option selected>Escolher...</option>
-    <option value="1">Um</option>
-    <option value="2">Dois</option>
-    <option value="3">Três</option>
+  <select class="custom-select" id="inputGroupSelect01" name="nome">
+
+    <?php
+      include "../back-end/services/jsonMethods.php";
+      $labs=getJson("../back-end/jsons/espacos/laboratorio/laboratorios.json");
+      $classes=getJson("../back-end/jsons/espacos/salas/salas.json");
+      $theaters=getJson("../back-end/jsons/espacos/teatro/teatros.json");
+    ?>
   </select>
 </div>
 
