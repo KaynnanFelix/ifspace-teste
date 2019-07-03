@@ -30,7 +30,10 @@ echo "<nav class='navbar navbar-expand-lg navbar-light bg-success'>
           <a class='dropdown-item' href='userPerfil.php'>Perfil</a>
           <a class='dropdown-item' href='sair.php'>Sair</a>
         </div>
-      </li>";
+      </li>
+      <div>
+      <a class='nav-link' href='registrar.php'> Reservar </a>
+      <div>";
     }else{
         echo "<li class='nav-item'>
         <a class='nav-link' href='login.php'>Login</a>
