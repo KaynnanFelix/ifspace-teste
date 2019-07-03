@@ -1,17 +1,17 @@
 <?php
 include "../back-end/services/jsonMethods.php";
-$labs=getJson("../back-end/jsons/espacos/laboratorio/laboratorios.json");
-$registros=getJson("../back-end/jsons/espacos/laboratorio/registros.json");
+$theaters=getJson("../back-end/jsons/espacos/teatro/teatros.json");
+$registros=getJson("../back-end/jsons/espacos/teatro/registros.json");
 $dataPoints = array();
 
-foreach($labs as $lab){
+foreach($theaters as $theater){
     $count=0;
     foreach($registros as $registro){
-        if($lab->nome===$registro->nome){
+        if($theater->nome===$registro->nome){
             $count++;
         }
     }
-    $dataPoints[]=array("label"=>$lab->nome, "y"=>$count);
+    $dataPoints[]=array("label"=>$theater->nome, "y"=>$count);
 }
 print_r($dataPoints);
 

@@ -16,36 +16,36 @@
 <?php
 include "layout.php";
 ?>
-        <div class="container">
-        <input id="type" type="radio" name="type" value="0" checked>Número
-        <input id="type" type="radio" name="type" value="1">Aula
-        <input id="type" type="radio" name="type" value="2">Professor
-        <input id="type" type="radio" name="type" value="3">Localização
-        <input type="text" class="form-control" id="searchInput" onkeyup="searchSpace()" placeholder="Pesquise ...">
-        <table class="table table-striped" id="tableSpace">
-            <thead>
-                <tr>
-                    <th>Número</th>
-                    <th>Aula</th>
-                    <th>Professor</th>
-                    <th>Localização</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php
-            include "../back-end/services/jsonMethods.php";
-            $spaces = getJson("../back-end/jsons/spaces/space.json");
-            foreach($spaces as $space){
-            echo "
-                <tr>
-                    <td>$space->numero</td>
-                    <td>$space->aula</td>
-                    <td>$space->professor</td>
-                    <td>$space->localizacao</td>
-                </tr>";
-            }
-            ?>
-            </tbody>
-        </table>
-    </div>  
+        
+    <div class="card w-25 mx-auto mt-5" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Faça aqui sua pesquisa!</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Insira o tipo e o nome</h6>
+    <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01" name="tipo">
+    <option selected>Escolher...</option>
+    <option value="1">Um</option>
+    <option value="2">Dois</option>
+    <option value="3">Três</option>
+  </select>
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Nome</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Escolher...</option>
+    <option value="1">Um</option>
+    <option value="2">Dois</option>
+    <option value="3">Três</option>
+  </select>
+</div>
+
+  </div>
+</div>
 </body>
