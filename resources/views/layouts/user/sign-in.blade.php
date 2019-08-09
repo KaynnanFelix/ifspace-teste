@@ -7,23 +7,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no ">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- Bootstrap CSS -->
+        @yield('css-view')
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="">
-        <title>IFSpace - Sign-in</title>    
+     
+        <title>IFSpace - Sign-in</title> 
+       
     </head>
-    <body class="text-center">
-        <form action="">
-            <h1></h1>
-            <label for=""></label>
-            <input type="text">
-            <label for=""></label>
-            <input type="text">
-            <div>
-                <label for="">
-                    <input type="text">
-                </label>
+    <body>
+        <form class="form-signin" action="">
+            <div class="text-center mb-4">
+            <h1>IFSpace</h1>
             </div>
-            <button></button>
+            <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Email address</label>
+            </div>
+            <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+            </div>
+            <button class="btn btn-lg btn-success btn-lock" type="submit">Sign in</button>
         </form>
  
         <!-- Optinal JavaScript -->
@@ -33,3 +37,4 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
+
