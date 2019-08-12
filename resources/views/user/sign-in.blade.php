@@ -30,7 +30,7 @@
             </div>
             <button class="btn btn-lg btn-success btn-lock" type="submit">Acessar</button>
             <div>
-                <p>Não é cadastrado?</p>
+                <p>Não é cadastrado? | Esqueceu a senha?</p>
             </div>
         </form>
         

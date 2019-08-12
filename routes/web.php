@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('login', function () {
-    return view('user.sign-in');
-});
+Route::get('/', ['uses' => 'Controller@homepage']);
+Route::get('/signup', ['uses' => 'Controller@signup']);
+Route::get('/signin', ['uses' => 'Controller@signin']);
+/*
+|--------------------------------------------------------------------------
+| User auth
+|--------------------------------------------------------------------------
+*/
