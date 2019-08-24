@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +14,27 @@
 */
 
 Route::get('/', ['uses' => 'Controller@homepage']);
-Route::get('/signup', ['uses' => 'Controller@signup']);
-Route::get('/signin', ['uses' => 'Controller@signin']);
+//Route::post('/signup', ['uses' => 'Controller@signup']);
+//Route::get('/signin', ['uses' => 'Controller@signin']);
+Route::post('/signup', 'Controller@signup');
+Route::get('/signin', 'Controller@signin');
+
+/*
+Route::prefix('/user')->groups(function(){
+    Route::get('/dashboard', ['uses' =>'Controller@userDashboard'])->name('user.dashboard');
+    Route::get(){
+    }
+});
+*/
 /*
 |--------------------------------------------------------------------------
 | User auth
 |--------------------------------------------------------------------------
 */
+
+/*
+|--------------------------------------------------------------------------
+| Spaces
+|--------------------------------------------------------------------------
+*/
+Route::resource('spaces', 'SpacesController');

@@ -8,10 +8,13 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Google Material icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>IFSpace - @yield('title')</title>    
     </head>
     <body>
-
+        @yield('sidebar')
+        @yield('content')
 
         <!-- Optinal JavaScript -->
         <!-- JQuery first, then Popper.js, then Bootstrap JS -->

@@ -19,19 +19,8 @@ class Controller extends BaseController
             ]
         );
     }
-
-    public function signin()
-    {
+    
+    public function signin(){
         return view('user.sign-in');
-    }
-
-    public function singup()
-    {
-        return view('user.sign-up');
-    }
-
-    public function settings()
-    {
-        return view('user.settings');
     }
 }
